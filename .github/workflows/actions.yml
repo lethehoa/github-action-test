@@ -14,7 +14,7 @@ jobs:
       - name: Test running
         run: |
           pwd
-          ls ..
+          ls /home/runner
       - name: Log Greet Time
         run: echo "${{ steps.greet.outputs.time }}"
       
