@@ -11,13 +11,16 @@ jobs:
         uses: actions/hello-world-javascript-action@v1.1
         with:
           who-to-greet: "Hoa le the"
-      - name: Test running 1
+      - name: Test running
         run: |
           pwd
           ls
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test
+      - name: Test running 2
+        run: |
+          pwd
+          ls
       - name: Log Greet Time
         run: echo "${{ steps.greet.outputs.time }}"
       
