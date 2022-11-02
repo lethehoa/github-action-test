@@ -1,6 +1,6 @@
 name: Actions Workflow
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   run-github-actionss:
@@ -12,7 +12,7 @@ jobs:
         with:
           who-to-greet: "Hoa le the"
       - name: Test running
-        run: |
+        run: |  #Some environment variables for running code  manually.
           pwd
           ls
           echo $GITHUB_SHA
