@@ -2,7 +2,11 @@ name: Actions Workflow
 
 
 on:
-  push:
+  # schedule:
+  #   - cron: "* * * * *"
+  # push:
+  repository_dispatch:
+    types: [test_build]
   pull_request:
     types: [closed, assigned, opened, reopened]
 jobs:
