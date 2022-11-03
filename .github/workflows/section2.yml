@@ -1,0 +1,10 @@
+name: "Section 2"
+
+on:
+  - pull_request
+jobs:
+  this-is-section-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test print environment variables
+        run: echo ${{ secrets.GITHUB_TOKEN }}
