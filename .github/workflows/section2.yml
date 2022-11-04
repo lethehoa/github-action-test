@@ -14,7 +14,9 @@ jobs:
           ls -a
           git init
           git remote add origin "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
-          git config --global user.email "test@github.com"
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_ACTOR
+          git config --global user.email "test@github.co"
           git config --global user.name "test"
           git fetch
           git checkout main
